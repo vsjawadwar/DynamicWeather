@@ -201,12 +201,52 @@
             <i class="fa-solid fa-sun" style="color: #dd9313;"></i>
         </div>
         <div class="information">
-            <h2 class="location"><i class="fa-solid fa-street-view" style="color: #f7f5f2;"></i>Pune India</h2>
+            <h2 class="location"><i class="fa-solid fa-street-view" style="color: #f7f5f2;"></i>&nbsp;Pune In</h2>
             <p id="date">WED | Apr 27 | 4:40 PM</p>
             <h1 class="temperature">26.49 C</h1>
             <h3 class="tempminmax">Min 26.39 C | Max 36.45C</h3>
         </div>
     </div>
+    <script>
+        const currentDate=document.getElementById("date");
+        let weathercondition=document.getElementById("weathercondition");
+        const tempStatus="Clouds";
+        const getCurrentDate=()=>{
+            let weekDay=new Array(7);
+            weekDay[0]="Sun";
+            weekDay[1]="Mon";
+            weekDay[2]="Tue";
+            weekDay[3]="Wed"
+            weekDay[4]="Thu";
+            weekDay[5]="Fri";
+            weekDay[6]="Sat";
+            let currentTime=new Date();
+            return weekDay[currentTime.getDay()];
+        }
+        const getCurrentTime=()=>{
+            var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var now=new Date();
+            var month=months[now.getMonth()];
+            var date=now.getDate();
+            let hours=now.getHours();
+            let mins=now.getMinutes();
+            let period="AM";
+            if(hours >11)
+            {
+                period="PM";
+                if(hours>12) hours-=12;
+            }
+            if(mins <10)
+            {
+                mins='0'+mins;
+            }
+            // var year=now.getFullYear();
+            // console.log(month +"/"+day);
+            return `${month} ${date} | ${hours}:${mins} ${period}`;
+        }
+        date.innerHTML= getCurrentDate() + " | " + getCurrentTime();
+        // getCurrentDate();
+    </script>
 </body>
 
 </html>
