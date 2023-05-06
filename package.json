@@ -1,0 +1,22 @@
+{
+  "name": "weatherapplication",
+  "version": "1.0.0",
+  "description": "dynamic weather application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsjawadwar/DynamicWeather.git"
+  },
+  "author": "Vishal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsjawadwar/DynamicWeather/issues"
+  },
+  "homepage": "https://github.com/vsjawadwar/DynamicWeather#readme",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
